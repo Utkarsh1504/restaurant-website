@@ -1,56 +1,6 @@
-@font-face {
-    font-family: 'jwf';
-    src: url('/fonts/jwf-book.woff2') format('woff2'),
-        url('/fonts/jwf-book.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-@font-face {
-    font-family: 'jwf';
-    src: url('/fonts/jwf-bookitalic.woff2') format('woff2'),
-        url('/fonts/jwf-bookitalic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'jwf';
-    src: url('/fonts/jwf-bold.woff2') format('woff2'),
-        url('/fonts/jwf-bold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'jwf';
-    src: url('/fonts/jwf-bolditalic.woff2') format('woff2'),
-        url('/fonts/jwf-bolditalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'jwf';
-    src: url('/fonts/jwf-ultra.woff2') format('woff2'),
-        url('/fonts/jwf-ultra.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'jwf';
-    src: url('/fonts/jwf-ultraitalic.woff2') format('woff2'),
-        url('/fonts/jwf-ultraitalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
 
 :root {
     --white: white;
@@ -68,7 +18,7 @@
     --black: #171321;
     --gray-light: #d4d0e0;
     --gray-medium: #b1acb9;
-    --font-family: jwf, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    --font-family: Poppins,'Roboto','Fira Mono',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
         Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol';
     --background: var(--white);
@@ -92,7 +42,7 @@
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    font-family: 'Poppins','Roboto','Fira mono','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
     background: #ff87d4;
     /*color: #78757f;*/
     color: #000000;
@@ -113,7 +63,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, serif;
+    font-family: 'Poppins','Roboto',Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, serif;
 }
 
 /*--------------------------------------------------------------
@@ -347,7 +297,7 @@ h6 {
     font-weight: 700;
     line-height: 56px;
     color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    font-family: 'Poppins',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
 }
 #hero h1 .sub-text{
     color: #0eefff;
@@ -360,7 +310,7 @@ h6 {
     color: #eee;
     margin-bottom: 10px 0 0 0;
     font-size: 22px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poppins','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #hero .btns {
@@ -555,7 +505,7 @@ section {
     margin: 0;
     font-size: 4.125rem;
     font-weight: 700;
-    font-family: 'jwf',
+    font-family: 'Poppins',
     "Playfair Display",
     serif;
     color: #171321;
@@ -691,7 +641,7 @@ section {
     color: #000000;
     font-weight: 600;
     font-size: 40px;
-    font-family: jwf,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about .content ul {
@@ -791,7 +741,7 @@ section {
     margin-bottom: 10px;
     transition: all ease-in-out 0.3s;
     border-radius: 50px;
-    font-family:jwf,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .menu #menu-flters li:hover,
@@ -875,7 +825,7 @@ section {
     color: #000;
     font-size: 30px;
     font-weight: 500;
-    font-family: jwf,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: cyan;
     border: 1px solid black;
     border-radius: 10px;
@@ -1489,7 +1439,7 @@ section {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 0;
-    font-family: "Playfair Display", serif;
+    font-family: 'Poppins',"Playfair Display", serif;
     color: #fff;
 }
 
