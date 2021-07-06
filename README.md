@@ -17,7 +17,7 @@ Working On
 
 ## See Our Project
 To see our beautiful website click on the link below
-- [Restaurant-Website](https://utkarsh1504.github.io/restaurant-website/)
+- [Restaurant-Website](https://dining-delight.netlify.app/)
 
 If you liked it, make sure to appreciate our team work by giving a star to this repo
 
@@ -34,7 +34,7 @@ If you liked it, make sure to appreciate our team work by giving a star to this 
   + Owl Carousel
 - Icons and Fonts
   + Boxicons
-  + Jwf(A huge thanks to [Jason](https://github.com/jlengstorf))
+  + Poppins
   + Icofont
   + googlefont(Open Sans)
 - JavaScript libraries
