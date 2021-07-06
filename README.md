@@ -1,4 +1,7 @@
 # Restaurant Website
+
+![Screenshot (45)](https://user-images.githubusercontent.com/76392681/124540710-a0f95c00-de3d-11eb-947d-16b10f195eed.png)
+
 This Project belongs to our **Summer Institutional Training** of Chandigarh University after the completion of the first year.
 
 ## Objective of the Project
