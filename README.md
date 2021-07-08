@@ -12,6 +12,7 @@ Showcase your solid knowledge of HTML and CSS creating a beautiful webpage for a
 Working On
 
 ## Project Description
+"Online Restaurant Website" is a web application. This system is developed to automate day to day activity of a restaurant. Restaurant is a kind of business that serves people all over world with ready-made food. This system is developed to provide service facility to restaurant and also to the customer. This restaurant website can be used by employees in a restaurant to handle the clients, their orders and can help them easily find free tables or place orders. The services that are provided is food ordering and reservation table management by the customer through the system online, customer information management and waiter information management, menu information management and report. 
 
 
 ## Team Member
