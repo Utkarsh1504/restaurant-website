@@ -1,348 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <title>Menu</title>
-    <style>
-      * {
-  box-sizing: border-box;
-}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  background-color:#ff87d4;
-  padding: 20px;
-  font-family: Arial;
- 
-}
+    body {
+      background-color: #ff87d4;
+      padding: 20px;
+      font-family: Arial;
 
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
+    }
 
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
 
-.row {
-  margin: 8px -16px;
-}
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
 
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 20px;
-}
-img
-{
-  width: 239.83px; height: 145px;
-}
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  display: none;
-  
-}
+    .row {
+      margin: 8px -16px;
+    }
 
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    /* Add padding BETWEEN each column (if you want) */
+    .row,
+    .row>.column {
+      padding: 20px;
+    }
 
-/* Content */
-.content {
-  background-color:#e7e3ca;
-  padding: 10px;
-  border-radius: 10px;
-   
-   
-  transition: transform .2s; /* Animation */
-   
-   
-  margin: 0 auto;
-}
-.content:hover {
-  transform: scale(1.1);
-  
-}
+    img {
+      width: 239.83px;
+      height: 145px;
+    }
 
-/* The "show" class is added to the filtered elements */
-.show {
-  display: flex;
-}
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+      display: none;
 
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  border-radius: 10px;
-  background-color: #ffe742;
-  cursor: pointer;
-}
+    }
 
-/* Add a grey background color on mouse-over */
-.btn:hover {
-  background-color: #666;
-  color: white;
-}
-</style>
+    /* Clear floats after rows */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Content */
+    .content {
+      background-color: #e7e3ca;
+      padding: 10px;
+      border-radius: 10px;
+
+
+      transition: transform .2s;
+      /* Animation */
+
+
+      margin: 0 auto;
+    }
+
+    .content:hover {
+      transform: scale(1.1);
+
+    }
+
+    /* The "show" class is added to the filtered elements */
+    .show {
+      display: flex;
+    }
+
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background-color: #ffe742;
+      cursor: pointer;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .btn:hover {
+      background-color: #666;
+      color: white;
+    }
+  </style>
 </head>
+
 <body>
   <script>
     filterSelection("all") // Execute the function and show all columns
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
     }
-  }
-}
 
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    // Show filtered elements
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
     }
-  }
-  element.className = arr1.join(" ");
-}
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+    // Hide elements that are not selected
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
   </script>
-    <div class="section-title">
-        <h2>Menu</h2>
-        <p>Check Our Tasty Menu</p>
-    </div>
-    
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('italian')"> Italian</button>
-  <button class="btn" onclick="filterSelection('indian')"> indian</button>
-  <button class="btn" onclick="filterSelection('Chinese')"> Chinese</button>
-</div>
-
-<!-- Portfolio Gallery Grid -->
-<div class="row">
-  <div class="column italian">
-    <div class="content">
-      <img src=" https://images.unsplash.com/photo-1516685018646-549198525c1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aXRhbGlhbiUyMGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Mountains" style="width:100%">
-      <h4>Italian veg Noodles</h4>
-      <p> Price- $19.99</p>
-      
-    </div>
-  </div>
-  <div class="column italian">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1542528180-1c2803fa048c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHNhbW9zYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Lights" style="width:100%">
-      <h4>Vegetable Salad</h4>
-      <p>Price- $10.9</p>
-      
-    </div>
-  </div>
-  <div class="column italian">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGNoaWNrZW4lMjBzYWxhZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Chicken Salad" style="width:100%">
-      <h4>Chicken Salad</h4>
-      <p>Price- $20</p>
-      
-    </div>
-  </div>
-  <div class="column italian">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1604908554105-088645debe26?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGJyb2Njb2xpJTIwcmFiZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Nature" style="width:100%">
-      <h4>Broccoli Rabe</h4>
-      <p>Price- $25.50</p>
-      
-    </div>
-  </div>
-  <div class="column italian">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/homemade-margarita-pizza-on-a-black-stone-background-rustic-style-picture-id1254420958?b=1&k=6&m=1254420958&s=170667a&w=0&h=rztCNbNhj_lhQ_373uSbxwQs96FZCyZK3vftg4KBCfI=" alt="Margherita pizza" style="width:100%">
-      <h4>Margherita pizza</h4>
-      <p>Price- $20.50</p>
-      
-    </div>
-  </div>
-  <div class="column italian">
-    <div class="content">
-      <img src="https://cdn.pixabay.com/photo/2018/11/04/18/46/bruschetta-3794670__480.jpg" alt="Bruschetta" style="width:100%">
-      <h4>Bruschetta</h4>
-      <p>Price- $15.50</p>
-      
-    </div>
-  </div>
-  <div class="column italian">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/risotto-fungi-porcini-on-rustic-wooden-table-picture-id871240058?k=6&m=871240058&s=612x612&w=0&h=BcMTOUhmBr8RyAkhsQOQ-Om9b8mivtrOfFiddleB0BQ=" alt="mushroom risotto" style="width:100%">
-      <h4>Mushroom risotto</h4>
-      <p>Price- $10.50</p>
-      
-    </div>
-  </div>
-  <div class="column italian">
-    <div class="content">
-      <img src="https://cdn.pixabay.com/photo/2017/01/09/20/23/pasta-salad-1967501__480.jpg" alt="italian pasta salad" style="width:100%">
-      <h4>Italian pasta salad</h4>
-      <p>Price- $20.50</p>
-      
-    </div>
+  <div class="section-title">
+    <h2>Menu</h2>
+    <p>Check Our Delicious Menu</p>
   </div>
 
-  <div class="column indian">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1587033649720-6850605eb2f1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGluZGklMjBjaGFuYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Car" style="width:100%">
-      <h4>Pindi Chana</h4>
-      <p>Price- $5</p>
-      
-    </div>
+  <div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('italian')"> Italian</button>
+    <button class="btn" onclick="filterSelection('indian')"> indian</button>
+    <button class="btn" onclick="filterSelection('Chinese')"> Chinese</button>
   </div>
-  <div class="column indian">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyeWFuaXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Chicken Biryani" style="width:100%">
-      <h4>Chicken Biryani</h4>
-      <p>Price- $25</p>
-    </div>
-  </div><div class="column indian">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1599307767316-776533bb941c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODF8fGluZGlhbiUyMGRpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Aloo Tikki" style="width:100%">
-      <h4>Aloo Tikki with green saus</h4>
-      <p>Price- $10.50</p>
-    </div>
-  </div>
-  <div class="column indian">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODJ8fGluZGlhbiUyMGRpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Car" style="width:100%">
-      <h4>Samosa</h4>
-      <p>Price- $5.50</p>
-    </div>
-  </div>
-  <div class="column indian">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/palak-paneer-and-nan-bread-picture-id497833552?b=1&k=6&m=497833552&s=170667a&w=0&h=q9i33XBl56VWVlQhozGN6QSna1DxmUIFpdqrGeOBOg4=" alt="Palak Paneer" style="width:100%">
-      <h4>Palak Paneer</h4>
-      <p>Price- $5.50</p>
-    </div>
-  </div>
-  <div class="column indian">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/tasty-fish-curry-stew-coconut-milk-picture-id910315272?b=1&k=6&m=910315272&s=170667a&w=0&h=8drd22Tu-rVOsBIkMnRn3lSxtT_BpL9YkDtJh3qgwbU=" alt="Fish Curry" style="width:100%">
-      <h4>Fish Curry</h4>
-      <p>Price- $15.50</p>
-    </div>
-  </div>
-  <div class="column indian">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/dal-makhani-or-daal-makhani-indian-lunchdinner-menu-picture-id530506394?b=1&k=6&m=530506394&s=170667a&w=0&h=LDK85J3cuij9Mke1x_wTmGZpfBnGN7Iw2bUeg2R7k5U=" alt="Dal Makhni" style="width:100%">
-      <h4>Dal Makhni</h4>
-      <p>Price- $10.50</p>
-    </div>
-  </div>
-  <div class="column indian">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/kebab-grilled-meat-on-a-cutting-board-with-flour-and-vinaigrette-picture-id1270859209?b=1&k=6&m=1270859209&s=170667a&w=0&h=WoSuXqA-P0oa9mRTjSPqA278AKckmvrbIwI1ekpm_Zk=" alt="kebab" style="width:100%">
-      <h4>Kebab</h4>
-      <p>Price- $21.50</p>
-    </div>
-  </div>
-  
 
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1527417986225-ccf4ae29e3c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VhJTIwZm9vZCUyMHNvdXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Octopus Soup" style="width:100%">
-      <h4>Octopus Soup</h4>
-      <p>Price- $20.99</p>
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column italian">
+      <div class="content">
+        <img
+          src=" https://images.unsplash.com/photo-1516685018646-549198525c1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aXRhbGlhbiUyMGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Mountains" style="width:100%">
+        <h4>Italian veg Noodles</h4>
+        <p> Price- $19.99</p>
+
+      </div>
     </div>
-  </div>
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://images.unsplash.com/photo-1542803417-f2be3270347d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGNoaW5lc2UlMjBmb29kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="Strew Food" style="width:100%">
-      <h4>Strew Food</h4>
-      <p>Price- $50</p>
+    <div class="column italian">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1542528180-1c2803fa048c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzF8fHNhbW9zYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Lights" style="width:100%">
+        <h4>Vegetable Salad</h4>
+        <p>Price- $10.9</p>
+
+      </div>
     </div>
-  </div>
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/sticky-honey-chilli-potatoes-in-a-spicy-sauce-sesame-seeds-and-green-picture-id1155838551?b=1&k=6&m=1155838551&s=170667a&w=0&h=Cnl16xpjGy6MBPrBinymosCArshTqvpnNlAAaMeFM0w=" alt="People" style="width:100%">
-      <h4>Honey Chilli Potatoes</h4>
-      <p>Price- $10.89</p>
+    <div class="column italian">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njd8fGNoaWNrZW4lMjBzYWxhZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Chicken Salad" style="width:100%">
+        <h4>Chicken Salad</h4>
+        <p>Price- $20</p>
+
+      </div>
     </div>
-  </div>
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/chicken-manchurian-in-pan-at-black-concrete-background-chicken-is-picture-id1173299703?b=1&k=6&m=1173299703&s=170667a&w=0&h=EqVGeqLYww3MkOhoBnIicyErIKlLWxAS34L_90a2dDo=" alt="Chicken Manchurian" style="width:100%">
-      <h4>Honey Chicken Manchurian</h4>
-      <p>Price- $15.89</p>
+    <div class="column italian">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1604908554105-088645debe26?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzh8fGJyb2Njb2xpJTIwcmFiZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Nature" style="width:100%">
+        <h4>Broccoli Rabe</h4>
+        <p>Price- $25.50</p>
+
+      </div>
     </div>
-  </div>
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/stir-fried-noodles-with-shrimps-and-vegetables-in-a-wok-picture-id1139482075?b=1&k=6&m=1139482075&s=170667a&w=0&h=oPb-SKrkflWRdyP6-4xYOz3doVOJWmCQlg4RxhTL2GE=" alt="Chinese salad" style="width:100%">
-      <h4>Chinese Salad</h4>
-      <p>Price- $11.89</p>
+    <div class="column italian">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/homemade-margarita-pizza-on-a-black-stone-background-rustic-style-picture-id1254420958?b=1&k=6&m=1254420958&s=170667a&w=0&h=rztCNbNhj_lhQ_373uSbxwQs96FZCyZK3vftg4KBCfI="
+          alt="Margherita pizza" style="width:100%">
+        <h4>Margherita pizza</h4>
+        <p>Price- $20.50</p>
+
+      </div>
     </div>
-  </div>
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://cdn.pixabay.com/photo/2017/07/25/00/23/spring-rolls-2536526__480.jpg" alt="spring rolls" style="width:100%">
-      <h4>Sprng Rolls</h4>
-      <p>Price- $15.89</p>
+    <div class="column italian">
+      <div class="content">
+        <img src="https://cdn.pixabay.com/photo/2018/11/04/18/46/bruschetta-3794670__480.jpg" alt="Bruschetta"
+          style="width:100%">
+        <h4>Bruschetta</h4>
+        <p>Price- $15.50</p>
+
+      </div>
     </div>
-  </div>
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/chinese-food-mapo-tofu-it-is-one-of-the-traditional-dishes-in-sichuan-picture-id1018757882?b=1&k=6&m=1018757882&s=170667a&w=0&h=s1laALo8WST2oL5pUfJHYjpueRgYiYS6e9UqnVvDke8=" alt="sichuan pork salad" style="width:100%">
-      <h4>sichuan pork</h4>
-      <p>Price- $10.89</p>
+    <div class="column italian">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/risotto-fungi-porcini-on-rustic-wooden-table-picture-id871240058?k=6&m=871240058&s=612x612&w=0&h=BcMTOUhmBr8RyAkhsQOQ-Om9b8mivtrOfFiddleB0BQ="
+          alt="mushroom risotto" style="width:100%">
+        <h4>Mushroom risotto</h4>
+        <p>Price- $10.50</p>
+
+      </div>
     </div>
-  </div>
-  <div class="column Chinese">
-    <div class="content">
-      <img src="https://media.istockphoto.com/photos/japanese-dumplings-gyoza-with-pork-meat-and-vegetables-picture-id1133151212?b=1&k=6&m=1133151212&s=170667a&w=0&h=08DwVTWmquFx0hcI0W-7DVzQjSQ9OXXgYKWHtXc-7_E=" alt="dumplings." style="width:100%">
-      <h4>Dumplings</h4>
-      <p>Price- $17.89</p>
+    <div class="column italian">
+      <div class="content">
+        <img src="https://cdn.pixabay.com/photo/2017/01/09/20/23/pasta-salad-1967501__480.jpg" alt="italian pasta salad"
+          style="width:100%">
+        <h4>Italian pasta salad</h4>
+        <p>Price- $20.50</p>
+
+      </div>
     </div>
+
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1587033649720-6850605eb2f1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGluZGklMjBjaGFuYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Car" style="width:100%">
+        <h4>Pindi Chana</h4>
+        <p>Price- $5</p>
+
+      </div>
+    </div>
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyeWFuaXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Chicken Biryani" style="width:100%">
+        <h4>Chicken Biryani</h4>
+        <p>Price- $25</p>
+      </div>
+    </div>
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1599307767316-776533bb941c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODF8fGluZGlhbiUyMGRpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Aloo Tikki" style="width:100%">
+        <h4>Aloo Tikki with green saus</h4>
+        <p>Price- $10.50</p>
+      </div>
+    </div>
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODJ8fGluZGlhbiUyMGRpc2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Car" style="width:100%">
+        <h4>Samosa</h4>
+        <p>Price- $5.50</p>
+      </div>
+    </div>
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/palak-paneer-and-nan-bread-picture-id497833552?b=1&k=6&m=497833552&s=170667a&w=0&h=q9i33XBl56VWVlQhozGN6QSna1DxmUIFpdqrGeOBOg4="
+          alt="Palak Paneer" style="width:100%">
+        <h4>Palak Paneer</h4>
+        <p>Price- $5.50</p>
+      </div>
+    </div>
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/tasty-fish-curry-stew-coconut-milk-picture-id910315272?b=1&k=6&m=910315272&s=170667a&w=0&h=8drd22Tu-rVOsBIkMnRn3lSxtT_BpL9YkDtJh3qgwbU="
+          alt="Fish Curry" style="width:100%">
+        <h4>Fish Curry</h4>
+        <p>Price- $15.50</p>
+      </div>
+    </div>
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/dal-makhani-or-daal-makhani-indian-lunchdinner-menu-picture-id530506394?b=1&k=6&m=530506394&s=170667a&w=0&h=LDK85J3cuij9Mke1x_wTmGZpfBnGN7Iw2bUeg2R7k5U="
+          alt="Dal Makhni" style="width:100%">
+        <h4>Dal Makhni</h4>
+        <p>Price- $10.50</p>
+      </div>
+    </div>
+    <div class="column indian">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/kebab-grilled-meat-on-a-cutting-board-with-flour-and-vinaigrette-picture-id1270859209?b=1&k=6&m=1270859209&s=170667a&w=0&h=WoSuXqA-P0oa9mRTjSPqA278AKckmvrbIwI1ekpm_Zk="
+          alt="kebab" style="width:100%">
+        <h4>Kebab</h4>
+        <p>Price- $21.50</p>
+      </div>
+    </div>
+
+
+    <div class="column Chinese">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1527417986225-ccf4ae29e3c4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2VhJTIwZm9vZCUyMHNvdXB8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Octopus Soup" style="width:100%">
+        <h4>Octopus Soup</h4>
+        <p>Price- $20.99</p>
+      </div>
+    </div>
+    <div class="column Chinese">
+      <div class="content">
+        <img
+          src="https://images.unsplash.com/photo-1542803417-f2be3270347d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGNoaW5lc2UlMjBmb29kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60"
+          alt="Strew Food" style="width:100%">
+        <h4>Strew Food</h4>
+        <p>Price- $50</p>
+      </div>
+    </div>
+    <div class="column Chinese">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/sticky-honey-chilli-potatoes-in-a-spicy-sauce-sesame-seeds-and-green-picture-id1155838551?b=1&k=6&m=1155838551&s=170667a&w=0&h=Cnl16xpjGy6MBPrBinymosCArshTqvpnNlAAaMeFM0w="
+          alt="People" style="width:100%">
+        <h4>Honey Chilli Potatoes</h4>
+        <p>Price- $10.89</p>
+      </div>
+    </div>
+    <div class="column Chinese">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/chicken-manchurian-in-pan-at-black-concrete-background-chicken-is-picture-id1173299703?b=1&k=6&m=1173299703&s=170667a&w=0&h=EqVGeqLYww3MkOhoBnIicyErIKlLWxAS34L_90a2dDo="
+          alt="Chicken Manchurian" style="width:100%">
+        <h4>Honey Chicken Manchurian</h4>
+        <p>Price- $15.89</p>
+      </div>
+    </div>
+    <div class="column Chinese">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/stir-fried-noodles-with-shrimps-and-vegetables-in-a-wok-picture-id1139482075?b=1&k=6&m=1139482075&s=170667a&w=0&h=oPb-SKrkflWRdyP6-4xYOz3doVOJWmCQlg4RxhTL2GE="
+          alt="Chinese salad" style="width:100%">
+        <h4>Chinese Salad</h4>
+        <p>Price- $11.89</p>
+      </div>
+    </div>
+    <div class="column Chinese">
+      <div class="content">
+        <img src="https://cdn.pixabay.com/photo/2017/07/25/00/23/spring-rolls-2536526__480.jpg" alt="spring rolls"
+          style="width:100%">
+        <h4>Sprng Rolls</h4>
+        <p>Price- $15.89</p>
+      </div>
+    </div>
+    <div class="column Chinese">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/chinese-food-mapo-tofu-it-is-one-of-the-traditional-dishes-in-sichuan-picture-id1018757882?b=1&k=6&m=1018757882&s=170667a&w=0&h=s1laALo8WST2oL5pUfJHYjpueRgYiYS6e9UqnVvDke8="
+          alt="sichuan pork salad" style="width:100%">
+        <h4>sichuan pork</h4>
+        <p>Price- $10.89</p>
+      </div>
+    </div>
+    <div class="column Chinese">
+      <div class="content">
+        <img
+          src="https://media.istockphoto.com/photos/japanese-dumplings-gyoza-with-pork-meat-and-vegetables-picture-id1133151212?b=1&k=6&m=1133151212&s=170667a&w=0&h=08DwVTWmquFx0hcI0W-7DVzQjSQ9OXXgYKWHtXc-7_E="
+          alt="dumplings." style="width:100%">
+        <h4>Dumplings</h4>
+        <p>Price- $17.89</p>
+      </div>
+    </div>
+    <!-- END GRID -->
   </div>
-<!-- END GRID -->
-</div> 
 </body>
+
 </html>
