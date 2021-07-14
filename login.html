@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/assets/icons/favicon.png" />
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- ===== BOX ICONS ===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -18,21 +18,21 @@
     <div class="login">
         <div class="login_content">
             <div class="login_img">
-                <img src="/assets/icons/img-login.svg" alt="">
+                <img src="assets/icons/img-login.svg" alt="">
             </div>
 
             <div class="login_forms">
-                <form action="" class="login_registre" id="login-in">
+                <form action="login.php" class="login_registre" id="login-in" method="POST">
                     <h1 class="login_title">Sign In</h1>
 
                     <div class="login_box">
                         <i class='bx bx-user login_icon'></i>
-                        <input type="text" placeholder="Username" class="login_input">
+                        <input type="text" placeholder="email" class="login_input" name="email" required>
                     </div>
 
                     <div class="login_box">
                         <i class='bx bx-lock-alt login_icon'></i>
-                        <input type="password" placeholder="Password" class="login_input">
+                        <input type="password" placeholder="Password" class="login_input" name="password" required>
                     </div>
 
                     <a href="#" class="login_forgot">Forgot password?</a>
@@ -43,27 +43,31 @@
                         <span class="login_account">Don't have an Account ?</span>
                         <span class="login_signin" id="sign-up">Sign Up</span>
                         <div>
-                            <a href="./index.html">Visit Our Site</a>
+                            <a href="index.html">Visit Our Site</a>
                         </div>
                     </div>
                 </form>
 
+<<<<<<< Updated upstream
                 <form action="connect2.php" class="login_create none" id="login-up">
+=======
+                <form action="connect2.php" class="login_create none" id="login-up" method="POST">
+>>>>>>> Stashed changes
                     <h1 class="login_title">Create Account</h1>
 
                     <div class="login_box">
                         <i class='bx bx-user login_icon'></i>
-                        <input type="text" placeholder="Username" class="login_input">
+                        <input type="text" placeholder="Username" class="login_input" name="U_name">
                     </div>
 
                     <div class="login_box">
                         <i class='bx bx-at login_icon'></i>
-                        <input type="text" placeholder="Email" class="login_input">
+                        <input type="text" placeholder="email" class="login_input" name="email">
                     </div>
 
                     <div class="login_box">
                         <i class='bx bx-lock-alt login_icon'></i>
-                        <input type="password" placeholder="Password" class="login_input">
+                        <input type="password" placeholder="password" class="login_input" name="password">
                     </div>
 
                     <button href="#" class="login_button" name="save">Sign Up</button>
@@ -79,7 +83,7 @@
                         <a href="#" class="login_social-icon"><i class='bx bxl-google'></i></a>
                         <br>
                         <div>
-                            <a href="./index.html">Visit Our Site</a>
+                            <a href="index.html">Visit Our Site</a>
                         </div>
                     </div>
                 </form>
@@ -90,7 +94,7 @@
     <!--===== MAIN JS =====-->
     <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </html>
 </body>
