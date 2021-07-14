@@ -9,7 +9,7 @@ This Project belongs to our **Summer Institutional Training** of Chandigarh Univ
 Showcase your solid knowledge of HTML and CSS creating a beautiful webpage for a restaurant. Making a layout for a restaurant will be a bit complicated than previous project examples. You will be aligning the different food items and drinks using a CSS layout grid. You will be adding prices, images and you need to give it a beautiful look and feel as well using the proper combination of colors, font-style and images. You can add pictures gallery for different food items, you can also add sliding images for a better look. Add links for redirection to internal pages. Make it responsive setting a viewport, using media queries and grid.
 
 ## Status
-**Done!**
+working on!
 
 ## Project Description
 "Online Restaurant Website" is a web application. This system is developed to automate day to day activity of a restaurant. Restaurant is a kind of business that serves people all over world with ready-made food. This system is developed to provide service facility to restaurant and also to the customer. This restaurant website can be used by employees in a restaurant to handle the clients, their orders and can help them easily find free tables or place orders. The services that are provided is food ordering and reservation table management by the customer through the system online, customer information management and waiter information management, menu information management and report. 
@@ -51,6 +51,6 @@ If you liked it, make sure to appreciate our team work by giving a star to this 
 
 ## License
 
-The Project is licensed under the Apache 2.0 license.
+The Project files are licensed under the Apache 2.0 license.
 
 I include the CC-BY-NC-4.0 license for the content, Feel free to share freely but do not resell our content.
