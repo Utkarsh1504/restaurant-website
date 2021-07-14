@@ -17,10 +17,10 @@
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
 		$stmt = $conn->prepare("insert into book(name, email, phone, date, time, people, message  ) values(?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssssis", $name, $email, $phone, $date, $time, $people, $message  );
+		$stmt->bind_param("ssissis", $name, $email, $phone, $date, $time, $people, $message  );
 		$execval = $stmt->execute();
 		echo $execval;
-		echo "Signup successfully.";
+		echo "Your table have reserved successfully.";
 		$stmt->close();
 		$conn->close();
 	}
